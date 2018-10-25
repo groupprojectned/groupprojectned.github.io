@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Seniors</title>
+	    <meta charset="utf-8">
+		<meta name="keywords" content="personal banking, online banking, self service">
+		<meta name="viewport" content="width=device-width, intial-scale=1">
+		<link rel="icon" type="image/x-icon" href="../images/ned.ico">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!--topnav-->
+			<nav class="navbar navbar-expand-md bg-green navbar-dark fixed-top">
+       <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-navicon"></i>
+          </span>
+        </a>
+           <a class="navbar-brand" href="../index.html">
+            <img class="img container-fluid" src="../images/favicon.jpg" data-toggle="tooltip" title="Home" alt="Logo" style="width:60px;">
+          </a> 
+          <span class="navbar-text" data-toggle="tooltip" title="Home"><a href="../index.html">Nedbank</a></span>
+         <!--Top Navbar links -->
+        <div class="collapse navbar-collapse mlc" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="">
+                <a class="topnavli" href="apply.html">Apply<i class="fa fa-edit"></i></a>
+              </li>
+               <li class="">
+                <a class="topnavli" href="#loginModal" role="button" data-toggle="modal">Login<i class="fa fa-user"></i></a>
+              </li> 
+          </ul>
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Login</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <a href="" class="float-right">New user?</a>
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Oops, you missed this one.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Enter your password too!</div>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                  <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                                </div>
+                                <div class="form-group py-4">
+                                    <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" data-target="#navigation" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-ellipsis-v"></i>
+          </span>
+        </a>
+
+      </nav>
+      <br>
+			<!--sidenav-->
+				<div class="container-fluid navcontent position-fixed">
+				    <div class="row d-flex d-md-block">
+				        <div class="col-md-3 float-left col-1 pl-0 pr-0 width nav-tabs" id="sidebar">
+				              <div class="list-group border-0 card text-center text-md-left">
+				                <a href="#v" class="nav-link active" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-user"></i><span class="d-none d-md-inline">PERSONAL</span></a>
+				                <a href="#vl" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-briefcase"></i> <span class="d-none d-md-inline">BUSINESS</span></a>
+				                <a href="#vla" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-newspaper-o"></i>
+				                 <span class="d-none d-md-inline">NEWS</span></a>
+				                <a href="#vlad" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-star"></i> <span class="d-none d-md-inline">TIPS</span></a>
+				                <a href="#vladi" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-info"></i> <span class="d-none d-md-inline">ABOUTUS</span></a>
+				            </div>
+				        </div>
+				        <div class="col px-5 pl-md-2 pt-2 main mx-auto">
+				            <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a></div>
+			<!--tabs-->
+			<div class="tab-content content flex-column-tab" id="sidebar">
+				<div class="tab-pane container active" id="v">
+				  	<h4 class="bgc"><a class="link" href="personalbanking.html">Personal banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="account.html">Account</a>
+				  	<hr>
+				  	<a href="seniors.html">Seniors</a>
+				  	<hr>
+				  	<a href="students.html">Students</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vl">
+				  <h4 class="bgc"><a class="link" href="businessbanking.html">Business Banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  <hr>
+				  <a href="fixeddeposits.html">Fixed Deposits</a>
+				  	<hr>
+				  	<a href="businesspayasyouuse.html">Business Pay-As-You-Use</a>
+				  	<hr>
+				  	<a href="startuploans.html">Start-Up Loans</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vla">
+				  	<h4 class="bgc"><a class="link" href="news.html">News (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				 	<a href="sponsorship.html">Sponsorships</a>
+				  	<hr>
+				  	<a href="affinityproject.html">Affinity Project</a>
+				  	<hr>
+				  	<a href="pressrelease.html">Press Releases</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>				
+				<div class="tab-pane container fade" id="vladi">
+				  	<h4 class="bgc"><a class="link" href="aboutus.html">About Us (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="aboutus.html">Who Are We?</a>
+		            <hr>
+		            <a href="pvv.html">Purpose,Value, Vision and Mission</a>
+		            <hr>
+		            <a href="financialstatements.html">Financial Statements</a>
+				  	<hr>
+		            <a href="card.html">Report Stolen Cards</a>
+		            <hr>
+		            <a href="../index.html">Home</a>
+				</div>
+			  	<div class="tab-pane container fade" id="vlad">
+			  		<h4 class="bgc"><a class="link" href="online.html">Banking Tips (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+			  		<hr>
+			  		<a href="online.html">Online Banking Tips</a>
+				  	<hr>
+				  	<a href="physical.html">Physical Banking Tips</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+			</div>
+			</main>
+		</div>
+	</div>
+		<style>
+			aside{
+				width: 500px;
+				height: 100%;
+				float: right;
+				background-color: lightgray;
+				padding: 10px;
+			}
+			main{
+				width: 800px;
+			}
+		</style>
+		<br>
+		<br>
+		<div class="move">
+			
+				<br>
+			<br>
+			<h1>Seniors</h1>
+			<br>
+			<br>
+			<p>
+				A full service transactional account if you are 55 years and over. Maintain a R10 000 investment account and you can enjoy significant fee reductions on your transactional account plus the convenience of free digital banking anytime, anywhere.
+			</p>
+		
+		
+			<h3 class="h3">Overview</h3>
+			<p>	Get the most out of your day-to-day banking by maintaining a balance of at least R10 000 in any Nedbank fixed deposit, notice deposit or JustSave Account. This account, and many of your transactions are free, as well as free digital banking and cheque book.</p>
+			<h3 class="h3">Features and benefits</h3>
+			<p>By maintaining a minimum balance of R10 000 in any Nedbank fixed deposit, notice deposit or JustSave Account you get</p>
+			<ul>
+
+				<li>Free monthly fee</li>
+				<li>Unlimited cheque deposits at Nedbank branches and ATMs</li>
+				<li>Four Nedbank ATM cash withdrawals. Two free over-the-counter cash withdrawals</li>
+				<li>Cheque payments</li>
+				<li>Unlimited debit and stop orders</li>
+				<li>A debit card</li>
+				<li>Unlimited interaccount transfers and third-party payments through Nedbank self-service banking channels (cellphone, telephone and internet banking)</li>
+				<li>First in-branch balance enquiry of every month. Balance enquiries at Nedbank ATMs and through other self-service banking channels</li>
+				<li>First statement enquiry of every month at Nedbank branches</li>
+				<li>Convenience of free digital banking anytime, anywhere (online banking, Nedbank Money App and SMS banking)</li>
+				
+
+				<li>A Gold Cheque card</li>
+				<li>A Garage Card</li>
+				<li>An overdraft facility*</li>
+				<li>Membership to Nedbank Greenbacks Programme</li>
+			</ul>
+			<p>The account comes with the following optional extras:</p>
+			<h3 class="h3">Who qualifies?</h3>
+			<ul>
+				<li>Individuals aged 55 years or over
+				<li>Non-residents are welcome to apply, at an additional monthly fee of R35
+				<li>Not available to trusts, companies or legal entities
+			</ul>
+			<h3 class="h3">What you need to apply?</h3>
+			<ul>
+				<li>Your valid barcoded identity document, smart identity card or passport with a valid permit.</li>
+                <li>Proof of residence, such as a utility bill, rental invoice or a phone account that has your name and physical address on it.</li>
+			</ul>
+			<h3 class="h3">Additional benefits</h3>
+			<ul>
+				<li>Free will drafting**</li>
+				<li>Free financial planning session</li>
+				
+				
+			</ul>
+			<div style="background-color: lightgrey;">
+			<h5 class="h5">Similar offers</h5>
+			<h6 class="h6">Savvy Bundle Account</h6>
+				Get total banking flexibility for a fixed monthly fee, unlimited transactions, an overdraft facility, membership to the Greenbacks Rewards Programme and other great benefits.
+
+			<h6 class="h6">Savvy Plus Account</h6>
+				If you do only a few transactions and want a fixed monthly fee and a Gold Cheque Card, this account is for you. Add more benefits if and when you need them.
+
+			<h6 class="h6">Ke Yona Bundle Account</h6>
+				An affordable transactional banking account for a fixed monthly fee that includes R2000 funeral cover and free digital subscription.
+			<hr>	
+			<h5 class="h5">You may also want :</h5>				
+			<h6 class="h6">	Fixed Deposit</h6>
+				Offering guaranteed interest rates for the term of your investment, the Nedbank Fixed Deposit may be the ideal short or medium term investment option for you.
+
+			<h6 class="h6">Nedbank MoneyTrader</h6>
+				The Nedbank MoneyTrader is a money market investment account offering highly competitive rates that are linked to money market conditions.
+
+			<h6 class="h6">MyPocket</h6>
+				Nedbank's hassle-free savings pocket that is linked to your transactional account and that provides easy access to your funds.
+				<hr>
+			<h5 class="h5">Contact Us</h5>
+			<a href="#"> 0860 555 111</a>	
+			</div>
+			<p>*All overdraft facility applications are subject to final credit approval and terms and conditions, including certain income source criteria. 
+				<br>
+                
+				**To qualify for the free drafting of your will you must appoint Nedgroup Trust as the executor of your estate.</p>
+
+		
+	</div>
+		
+
+	</body>
+</html>

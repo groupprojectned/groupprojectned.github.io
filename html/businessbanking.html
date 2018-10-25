@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Business Banking</title>
+    <!--<link rel="stylesheet" type="text/css" href="../css/ebootstrap.css">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/ned.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #2c2c2c;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-top: 5%;
+    }
+
+    .sidenav a {
+        padding: 4px 4px 4px 10px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #c4ac36;
+        display: block;
+        transition: 0.3s;
+        margin-top: 15px;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="fixeddeposits.html">Fixed Deposits</a>
+      <a href="startuploans.html">Start-Up Loans</a>
+      <a href="businesspayasyouuse.html">Business-Pay-As-You -Use</a>
+      <a href="../index.html">Home</a>
+    </div>
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+    </script>
+		<!--topnav-->
+      <nav class="navbar navbar-expand-md bg-green navbar-dark fixed-top">
+        <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#sidebar">
+            <i class="fa fa-navicon"></i>
+          </span>
+        </a>
+           <a class="navbar-brand" href="../index.html">
+            <img class="img container-fluid" src="../images/favicon.jpg" data-toggle="tooltip" title="Home" alt="Logo" style="width:60px;">
+          </a> 
+          <span class="navbar-text" data-toggle="tooltip" title="Home"><a href="../index.html">Nedbank</a></span>
+         <!--Top Navbar links -->
+        <div class="collapse navbar-collapse mlc" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="">
+                <a class="topnavli" href="apply.html">Apply<i class="fa fa-edit"></i></a>
+              </li>
+               <li class="">
+                <a class="topnavli" href="#loginModal" role="button" data-toggle="modal">Login<i class="fa fa-user"></i></a>
+              </li> 
+          </ul>
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Login</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <a href="" class="float-right">New user?</a>
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Oops, you missed this one.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Enter your password too!</div>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                  <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                                </div>
+                                <div class="form-group py-4">
+                                    <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" data-target="#navigation" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-ellipsis-v"></i>
+          </span>
+        </a>
+
+      </nav>
+      <br>
+      <div class="main">
+			<!--sidenav-->
+				<div class="container-fluid navcontent position-fixed">
+				    <div class="row d-flex d-md-block">
+				        <div class="col-md-3 float-left col-1 pl-0 pr-0 width nav-tabs" id="sidebar">
+				              <div class="list-group border-0 card text-center text-md-left">
+				                <a href="#v" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-user"></i><span class="d-none d-md-inline">PERSONAL</span></a>
+				                <a href="#vl" class="nav-link active" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-briefcase"></i> <span class="d-none d-md-inline">BUSINESS</span></a>
+				                <a href="#vla" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-newspaper-o"></i>
+				                 <span class="d-none d-md-inline">NEWS</span></a>
+				                <a href="#vlad" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-star"></i> <span class="d-none d-md-inline">TIPS</span></a>
+				                <a href="#vladi" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-info"></i> <span class="d-none d-md-inline">ABOUTUS</span></a>
+				            </div>
+				        </div>
+				        <div class="col px-5 pl-md-2 pt-2 main mx-auto">
+				            <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a>
+				        </div>
+			<!--tabs-->
+			<div class="tab-content content flex-column-tab container-fluid" id="sidebar">
+				<div class="tab-pane container fade" id="v">
+				  	<h4 class="bgc"><a class="link" href="personalbanking.html">Personal banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="account.html">Account</a>
+				  	<hr>
+				  	<a href="seniors.html">Seniors</a>
+				  	<hr>
+				  	<a href="students.html">Students</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container active" id="vl">
+				  <h4 class="bgc"><a class="link" href="businessbanking.html">Business Banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  <hr>
+				  <a href="fixeddeposits.html">Fixed Deposits</a>
+				  	<hr>
+				  	<a href="startuploans.html">Start-Up Loans</a>
+				  	<hr>
+				  	<a href="businesspayasyouuse.html">Business Pay-As-You-Use</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vla">
+				  	<h4 class="bgc"><a class="link" href="news.html">News (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				 	<a href="sponsorship.html">Sponsorships</a>
+				  	<hr>
+				  	<a href="affinityproject.html">Affinity Project</a>
+				  	<hr>
+				  	<a href="pressrelease.html">Press Releases</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vladi">
+				  	<h4 class="bgc"><a class="link" href="aboutus.html">About Us (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="aboutus.html">Who Are We?</a>
+		            <hr>
+		            <a href="pvv.html">Purpose,Value, Vision and Mission</a>
+		            <hr>
+		            <a href="card.html">Report Stolen Cards</a>
+		            <hr>
+		            <a href="financialstatements.html">Financial Statements</a>
+		            <hr>
+		            <a href="../index.html">Home</a>
+				</div>
+			  	<div class="tab-pane container fade" id="vlad">
+			  		<h4 class="bgc"><a class="link" href="online.html">Banking Tips (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+			  		<hr>
+			  		<a href="online.html">Online Banking Tips</a>
+				  	<hr>
+				  	<a href="physical.html">Physical Banking Tips</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+			</div>
+					</div>
+				</div>
+			<div>
+			<br>
+			<br>
+			<br>
+    <div id="main">
+	<img class="move img-fluid" src="../images/4.png" alt="businessbankingimage">
+	<div class="container2">
+  		<div class="box">
+  			<h4 style="font-size: 2vw;">Similar Offers</h4>
+  			<h6 style="font-size: 1.3vw;">Business Pay-As-You-Use</h6>
+  			<p class="lead">A fully functional account on a pay-as-you-use basis, with the option to add services as needed.</p>
+  			<hr>
+  			<h4 style="font-size: 2vw;">You may also want</h4>
+  			<h6 style="font-size: 1.3vw;">Debtor Management</h6>
+  			<p class="lead">Increase profitability and grow your business with Nedbank's leading debtor management solution and working capital access.</p>
+  			<h6 style="font-size: 1.3vw;">Cash Solutions</h6>
+  			<p class="lead">A customised cash-handling service for your business, need to manage collections effectively while reducing the operational risk.</p>
+  			<h6 style="font-size: 1.3vw;">Corporate Saver</h6>
+  			<p class="lead">If you administer funds on your client’s behalf, Corporate Saver offers you a secure, flexible and high-yielding account to maximise interest with attractive pricing</p>
+  			<hr>
+  			<h4 style="font-size: 2vw;">Contact Us</h4>
+  			 &#x260F; 0860 555 333<br>
+  			 &#x2709; business@nedbank.co.za  	
+  			
+
+  		</div>		
+  	</div>
+  		
+  	<div class="move">
+
+    <p class="bigp" style="font-size: 2vw;">When it comes to handling your business, not all banks are the same. Partnering with the right bank that you can trust can mean a world of difference to your ultimate success and achievement of your financial goals.</p>
+
+    <h6 style="font-size: 1.3vw;">Call me back</h6>
+	  <br>
+	  <br>
+	<br>
+	<br>
+	<h3 style="font-size: 2.6vw;">What we offer:</h3>
+	<p>At Nedbank we help you with end to end financial solutions that are as unique and diverse as you and your business are. At the core of our offering is our Wholeview Business BankingTM philosophy,  a holistic view of your business, and the co-creation  of comprehensive business solutions to optimise the way money flows in your business to help you achieve your goals. </p>
+	<h3 style="font-size: 2.6vw;">Our offering includes:</h3>
+		<ul style="font-size: 1.4vw;">
+			<li>A local team of dedicated, skilled bankers and specialists, who understand your specific needs and can offer you a different perspective as well as expert advice on how your money needs to flow to help you achieve your goals.  </li>
+			<li>Day to day banking and transactional solutions to make it easier for you to make and receive payments and manage your cash whilst reducing risk; </li>
+			<li>A range of tailormade financing options, suited to your long and short term needs, to help your business grow and expand Investment products to help you put excess funds to work, growing liquidity and protecting your business. </li>
+			<li>Global trade solutions that make it easier to trade across borders and move your money around internationally, whilst managing your risk and maximising returns;</li>
+			<li>Industry expertise with tailored offerings. Unique solutions and expert knowledge for clients operating in the agricultural, medical, professional and franchise sectors. </li>
+			<li>Risk Management and insurance solutions to protect you and your business, minimising your exposure to risk and providing you greater peace of mind</li>
+			<li>Banking and Beyond™ services. Practical tools and support solutions to help you create efficiencies and optimise the management of your business.</li>
+		</ul>
+	<p style="font-size: 1.6vw;">
+		With a strong partnership you can build anything. Partner with Nedbank to get knowledge and insights that can take your business to the next level.
+	</p>
+	</div>	
+</div>
+</div>
+</div>	
+	</body>
+</html>

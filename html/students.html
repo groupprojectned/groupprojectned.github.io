@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Students</title>
+	    <meta charset="utf-8">
+		<meta name="keywords" content="personal banking, online banking, self service">
+		<meta name="viewport" content="width=device-width, intial-scale=1">
+		<link rel="icon" type="image/x-icon" href="../images/ned.ico">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+				
+	</head>
+	<body>
+		<!--topnav-->
+			 <nav class="navbar navbar-expand-md bg-green navbar-dark fixed-top">
+       <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-navicon"></i>
+          </span>
+        </a>
+           <a class="navbar-brand" href="../index.html">
+            <img class="img container-fluid" src="../images/favicon.jpg" data-toggle="tooltip" title="Home" alt="Logo" style="width:60px;">
+          </a> 
+          <span class="navbar-text" data-toggle="tooltip" title="Home"><a href="../index.html">Nedbank</a></span>
+         <!--Top Navbar links -->
+        <div class="collapse navbar-collapse mlc" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="">
+                <a class="topnavli" href="apply.html">Apply<i class="fa fa-edit"></i></a>
+              </li>
+               <li class="">
+                <a class="topnavli" href="#loginModal" role="button" data-toggle="modal">Login<i class="fa fa-user"></i></a>
+              </li> 
+          </ul>
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Login</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <a href="" class="float-right">New user?</a>
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Oops, you missed this one.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Enter your password too!</div>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                  <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                                </div>
+                                <div class="form-group py-4">
+                                    <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" data-target="#navigation" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-ellipsis-v"></i>
+          </span>
+        </a>
+
+      </nav>
+      <br>
+			<!--sidenav-->
+				<div class="container-fluid navcontent position-fixed">
+				    <div class="row d-flex d-md-block">
+				        <div class="col-md-3 float-left col-1 pl-0 pr-0 width nav-tabs" id="sidebar">
+				              <div class="list-group border-0 card text-center text-md-left">
+				                <a href="#v" class="nav-link active" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-user"></i><span class="d-none d-md-inline">PERSONAL</span></a>
+				                <a href="#vl" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-briefcase"></i> <span class="d-none d-md-inline">BUSINESS</span></a>
+				                <a href="#vla" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-newspaper-o"></i>
+				                 <span class="d-none d-md-inline">NEWS</span></a>
+				                <a href="#vlad" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-star"></i> <span class="d-none d-md-inline">TIPS</span></a>
+				                <a href="#vladi" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-info"></i> <span class="d-none d-md-inline">ABOUTUS</span></a>
+				            </div>
+				        </div>
+				        <div class="col px-5 pl-md-2 pt-2 main mx-auto">
+				            <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a></div>
+			<!--tabs-->
+			<div class="tab-content content flex-column-tab" id="sidebar">
+				<div class="tab-pane container active" id="v">
+				  	<h4 class="bgc"><a class="link" href="personalbanking.html">Personal banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="account.html">Account</a>
+				  	<hr>
+				  	<a href="seniors.html">Seniors</a>
+				  	<hr>
+				  	<a href="students.html">Students</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vl">
+				  <h4 class="bgc"><a class="link" href="businessbanking.html">Business Banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  <hr>
+				  <a href="fixeddeposits.html">Fixed Deposits</a>
+				  	<hr>
+				  	<a href="businesspayasyouuse.html">Business Pay-As-You-Use</a>
+				  	<hr>
+				  	<a href="startuploans.html">Start-Up Loans</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vla">
+				  	<h4 class="bgc"><a class="link" href="news.html">News (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				 	<a href="sponsorship.html">Sponsorships</a>
+				  	<hr>
+				  	<a href="affinityproject.html">Affinity Project</a>
+				  	<hr>
+				  	<a href="pressrelease.html">Press Releases</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>				
+			  	<div class="tab-pane container fade" id="vlad">
+			  		<h4 class="bgc"><a class="link" href="online.html">Banking Tips (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+			  		<hr>
+			  		<a href="online.html">Online Banking Tips</a>
+				  	<hr>
+				  	<a href="physical.html">Physical Banking Tips</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vladi">
+				  	<h4 class="bgc"><a class="link" href="aboutus.html">About Us (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="aboutus.html">Who Are We?</a>
+		            <hr>
+		            <a href="pvv.html">Purpose,Value, Vision and Mission</a>
+		            <hr>
+		            <a href="financialstatements.html">Financial Statements</a>
+				  	<hr>
+		            <a href="card.html">Report Stolen Cards</a>
+		            <hr>
+		            <a href="../index.html">Home</a>
+				</div>
+			</div>
+			</main>
+		</div>
+	</div>
+		<style>
+			aside{
+				width: 500px;
+				height: 100%;
+				float: right;
+				background-color: lightgray;
+				padding: 10px;
+			}
+			main{
+				width: 800px;
+			}
+		</style>
+		<br>
+		<br>
+		<div class="move">
+			<br>
+			<br>
+			<h1>Students</h1>
+			<br>
+			<img class="img3 img3 container-fluid3" src="../images/student.png" alt="3">
+			<br>
+			<br>
+		<p>
+		   <strong> An Unlocked.me Student account is perfect for fulltime students
+            between the ages of 16 and 26 . You get a host of free transactions plus
+            monthly lifestyle benefits . It's your life, go on, UNLOCK it. Unlock
+            your lifestyle, your potential and your money with an Unlocked.me Student
+            account.</strong>
+		</p>
+		<h3 class="h3">Features and benefits</h3>
+		<p>For a fixed monthly fee of just R20, you get:</p>
+		<ul>
+			<li>Free debit card phurchases</li>
+			<li>Free withdrawals at Nedbank ATMs</li>
+			<li>Free debit and stop orders</li>
+			<li>Free balance enquires at Nedbank ATMs and self service channels</li>
+			<li>Free statement enquires at Nedbank ATMs and internet banking </li>
+		</ul>
+		<h3 class="h3">Who qualifies</h3>
+		<ul>
+			<li>Full time student aged 16-26 years old</li>
+			<li>Non-residents are welcome to apply, at an additional fee of R35 pere month</li>
+			<li>Not available to trusts, companies or legal entities</li>
+		</ul>
+		<h3 class="h3">Lifestyle benefits</h3>
+		<p>Unlock great lifestyle benefits with your Unlocked.me Student account. Choose any 2 of these 4 benefits monthly.  Your benefits are guaranteed as long as you make one deposit and transact three times each month.
+			</p>
+		<ul>
+			
+			<li>100 MB data bundle</li>
+			<li>R30 online Debonairs voucher</li>
+			<li>2 for 1 Nu Metro tickets</li>
+			<li>R150 TravelStart voucher</li>
+			 
+		</ul>
+		<p>To redeem dial *120*4545#.</p>
+		<h3 class="h3">What you need to apply?</h3>
+		<ul>
+			<li>your valid South African identity document or smart identiy card or A Passport with a valid study permit.</li>
+			<li>No proof of residence required</li>
+			<li>Proof of registration at a tertiary institution: confirmston letterhead of trhe tertiary institution at which you are registered; or a valid sstudent card; or a letter of acceptance by the tertiary institution, on an official letterhead.</li>
+		</ul>
+		<div style="background-color: lightgrey;">
+			<h5 class="h5">Similar offers</h5>
+			<h6 class="h6">savvy plus</h6>
+			If you do only a few transactions and want a fixed monthly fee and a Gold cheque card, this account is for you. Add more benefits if and when you need them.
+
+            <h6 class="h6">Young Professionals</h6>
+             If you are under 30 years old and hold a four-year qualification, we know you are going places. To help you in the early stages of your career Nedbank offers you[...]
+             <hr>
+			<h5 class="h5">You may also want:</h5>
+			<h6 class="h6">JustInvest</h6>
+				Get competitive, tiered interest rates, and access to your minimum deposit of R5 000 within 24 hours with this unique money market account.
+
+			<h6 class="h6">Nedbank Money app</h6>
+				A secure and convenient way to manage your money on the go.
+
+				Financial fitness tips
+				Save on fees
+				Some tips to help you get more value from your account with Nedbank.
+
+			<h6 class="h6">MyPocket</h6>
+				Hassle-free savings pocket linked to your transactional account and that provides easy access to your funds.
+			<hr>
+			<h5 class="h5">Contact Us</h5>
+			<a href="#">0860 5550 111</a>	
+		</div>
+
+</div>
+
+
+	</body>
+</html>

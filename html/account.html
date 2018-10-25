@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Nedbank Account</title>
+	    <meta charset="utf-8">
+		<meta name="keywords" content="personal banking, online banking, self service">
+		<meta name="description" content="it includes ways to check your personal accounts and ways to banking online">
+		<meta name="viewport" content="width=device-width, intial-scale=1">
+		<link rel="icon" type="image/x-icon" href="../images/ned.ico">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		 <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #2c2c2c;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+                margin-top: 5%;
+            }
+
+            .sidenav a {
+                padding: 4px 4px 4px 10px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #c4ac36;
+                display: block;
+                transition: 0.3s;
+                margin-top: 15px;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+                margin-top: 50px;
+            }
+
+            #main {
+                transition: margin-left .5s;
+                padding: 16px;
+            }
+
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
+            </style>
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="personalbanking.html">Personal Banking</a>
+              <a href="businessbanking.html">Business Banking</a>
+              <a href="news.html">News</a>
+              <a href="online.html">Tips</a>
+              <a href="aboutus.html">About Us</a>
+              <a href="../index.html">Home</a>
+            </div>
+            <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+            </script>
+            <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+    </script>
+		<!--topnav-->
+      <nav class="navbar navbar-expand-md bg-green navbar-dark fixed-top">
+        <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false">
+					<span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+						<i class="fa fa-navicon"></i>
+					</span>
+				</a>
+           <a class="navbar-brand" href="../index.html">
+            <img class="img container-fluid" src="../images/favicon.jpg" data-toggle="tooltip" title="Home" alt="Logo" style="width:60px;">
+          </a> 
+          <span class="navbar-text" data-toggle="tooltip" title="Home"><a href="../index.html">Nedbank</a></span>
+         <!--Top Navbar links -->
+        <div class="collapse navbar-collapse mlc" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="">
+                <a class="topnavli" href="apply.html">Apply<i class="fa fa-edit"></i></a>
+              </li>
+               <li class="">
+                <a class="topnavli" href="#loginModal" role="button" data-toggle="modal">Login<i class="fa fa-user"></i></a>
+              </li> 
+          </ul>
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Login</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form"  autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <a href="" class="float-right">New user?</a>
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Oops, you missed this one.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Enter your password too!</div>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                  <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                                </div>
+                                <div class="form-group py-4">
+                                    <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" data-target="#navigation" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-ellipsis-v"></i>
+          </span>
+        </a>
+
+      </nav>
+      <br>
+       <div class="main">
+				<!--sidenav-->
+				<div class="container-fluid navcontent position-fixed">
+				    <div class="row d-flex d-md-block">
+				        <div class="col-md-3 float-left col-1 pl-0 pr-0 width nav-tabs" id="sidebar">
+				              <div class="list-group border-0 card text-center text-md-left">
+				                <a href="#v" class="nav-link active" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-user"></i><span class="d-none d-md-inline">PERSONAL</span></a>
+				                <a href="#vl" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-briefcase"></i> <span class="d-none d-md-inline">BUSINESS</span></a>
+				                <a href="#vla" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-newspaper-o"></i>
+				                 <span class="d-none d-md-inline">NEWS</span></a>
+				                <a href="#vlad" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-star"></i> <span class="d-none d-md-inline">TIPS</span></a>
+				                <a href="#vladi" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-info"></i> <span class="d-none d-md-inline">ABOUTUS</span></a>
+				            </div>
+				        </div>
+				        <div class="col px-5 pl-md-2 pt-2 main mx-auto">
+				            <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a></div>
+			<!--tabs-->
+			<div class="tab-content content flex-column-tab" id="sidebar">
+				<div class="tab-pane container active" id="v">
+				  	<h4 class="bgc"><a class="link" href="personalbanking.html">Personal banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="account.html">Account</a>
+				  	<hr>
+				  	<a href="seniors.html">Seniors</a>
+				  	<hr>
+				  	<a href="students.html">Students</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vl">
+				  <h4 class="bgc"><a class="link" href="businessbanking.html">Business Banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  <hr>
+				  <a href="fixeddeposits.html">Fixed Deposits</a>
+				  	<hr>
+				  	<a href="startuploans.html">Start-Up Loans</a>
+				  	<hr>
+				  	<a href="businesspayasyouuse.html">Business Pay-As-You-Use</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vla">
+				  	<h4 class="bgc"><a class="link" href="news.html">News (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				 	<a href="sponsorship.html">Sponsorships</a>
+				  	<hr>
+				  	<a href="affinityproject.html">Affinity Project</a>
+				  	<hr>
+				  	<a href="pressrelease.html">Press Releases</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vladi">
+				  	<h4 class="bgc"><a class="link" href="aboutus.html">About Us (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="aboutus.html">Who Are We?</a>
+		            <hr>
+		            <a href="pvv.html">Purpose,Value, Vision and Mission</a>
+		            <hr>
+		            <a href="card.html">Report Stolen Cards</a>
+		            <hr>
+		            <a href="financialstatements.html">Financial Statements</a>
+		            <hr>
+		            <a href="../index.html">Home</a>
+				</div>
+			  	<div class="tab-pane container fade" id="vlad">
+			  		<h4 class="bgc"><a class="link" href="online.html">Banking Tips (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+			  		<hr>
+			  		<a href="online.html">Online Banking Tips</a>
+				  	<hr>
+				  	<a href="physical.html">Physical Banking Tips</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+			</div>
+			</main>
+		</div>
+	</div>
+		<style>
+			aside{
+				width: 500px;
+				height: 100%;
+				float: right;
+				background-color: lightgray;
+				padding: 10px;
+			}
+			main{
+				width: 800px;
+			}
+		</style>
+		<br>
+		<br>
+		<br>
+		<div class="move">
+			<br>
+			<h1>Account</h1>
+			<br>
+			<br>
+			<img class="img3 img3 container-fluid3" src="../images/account.png" alt="3">
+		<p>
+			 A no-frills transparent account with a flat monthly fee, allowing you to pay only for what you use and nothing more. You can add additional benefits when required.
+		</p>
+		
+		<div>
+			<h3 class="h3">Features and benefits</h3>
+			<ul>
+               <li>Free card swipes</li>
+               <li>Free balance enquiries at self-assisted channels (Nedbank ATM, SMS banking, online banking, Money app)</li>
+               <li>Free email statements</li>
+               <li>Free stop orders</li>
+            </ul>
+            <h3 class="h3">Who qualifies?</h3>
+			<ul>
+				<li>Individuals over the age of 16 years.</li>
+				<li>Non-residents are welcome to apply, at an additional monthly fee of R35.</li>
+				<li>Not available to trusts, companies or legal entities.</li>
+			</ul>
+               <h3 class="h3">What you need to apply?</h3>
+			<ul>
+				<li>Your valid South African identity card/document or passport with valid permit.</li>
+				<li>Proof of residence, such as a utility bill, rental invoice or a phone account that has your name and physical address on it.</li>
+			</ul>
+
+            <h3 class="h3">Optional extras</h3>
+			<ul>
+				<li>eNote SMS notifications</li>
+				<li>Airtime topup at Nedbank ATMs and self-service channels (SMS banking, online banking, Money app)</li>
+				<li>Send money to any cellphone in South Africa with Send-iMali</li>
+				<li>Buy prepaid electricity</li>
+		    </ul>
+		   
+		    <h2 class="h2">Use your cellphone to pay In-store, Online, Anywhere.</h2>
+		    <p>Now you can pay with your card at any QR code using the Nedbank Money app scan to pay.</p>
+				<p>Convinience</p> 
+		    <ul>
+					<li>No need for multiple apps on your phone, the Nedbank Money app allows you to scan to pay majority of QR codes in South Africa (Masterpass, SnapScan and Zapper).</li>
+					<li>No need to load and maintain cards in app for scan to pay.</li>
+					<li>You can even block, replace and scan to pay before you get your replacement plastic.</li>
+					<li>Security - Authorise every scan to pay purchase with Money App login details.</li>
+					<li>Earn rewards - Earn Greenbacks and Membership Rewards points at same rate as card purchases.</li>
+					<li>Zero rated app - Do not use a lot of data as the Nedbank Money app is a zero rated app.</li>
+		    </ul>
+		</div>
+		<div style="background-color: lightgrey;">
+		<h5 class="h5">Similar products</h5>
+		<h6 class="h6">Ke Yona Bundle Account</h6>
+			Get the convenience of a transactional banking account that offers you funeral cover and free digital banking at a low monthly fixed fee.
+
+		<h6 class="h6">Savvy Plus Account</h6>
+			This account will allow you to get the most out of your banking, for one monthly fee. You can add more benefits when you need them such as an overdraft facility or the Nedbank Greenbacks Rewards Programme.
+
+		<h6 class="h6">Savvy Bundle Account</h6>
+			Get total banking flexibility for a fixed monthly fee, including a Platinum credit and cheque card , unlimited transactions, an overdraft facility, membership to the Greenbacks Rewards Programme and other great benefits.
+		<hr>
+
+		<h5 class="h5">You may also want</h5>
+		<h6 class="h6">MyPocket</h6>
+			MyPocket is Nedbank's hassle-free savings pocket that is linked to your transactional account and that provides easy access to your funds.
+
+		<h6 class="h6">Stokvel</h6>
+			Now you can get more out of your stokvel than ever before with the new Nedbank Stokvel Account. The new Nedbank Stokvel Account is another way we get your money to back you.
+
+		<h6 class="h6">Money app</h6>
+			A secure and convenient way to manage your money on the go. Now you can bank anytime, anywhere.
+		<hr>
+		<h5 class="h5">Contact Us</h5>
+        <i class="material-icons">call:</i>	
+		<a href="#">0860 555 111</a>
+	</div>
+</div>
+</div>
+
+	</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Seniors</title>
+      <meta charset="utf-8">
+    <meta name="keywords" content="personal banking, online banking, self service">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../images/ned.ico">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #2c2c2c;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-top: 5%;
+    }
+
+    .sidenav a {
+        padding: 4px 4px 4px 10px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #c4ac36;
+        display: block;
+        transition: 0.3s;
+        margin-top: 15px;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="personalbanking.html">Personal Banking</a>
+      <a href="businessbanking.html">Business Banking</a>
+      <a href="news.html">News</a>
+      <a href="online.html">Tips</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="../index.html">Home</a>
+    </div>
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+    </script>
+		<!--topnav-->
+      <nav class="navbar navbar-expand-md bg-green navbar-dark fixed-top">
+       <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-navicon"></i>
+          </span>
+        </a>
+           <a class="navbar-brand" href="../index.html">
+            <img class="img container-fluid" src="../images/favicon.jpg" data-toggle="tooltip" title="Home" alt="Logo" style="width:60px;">
+          </a> 
+          <span class="navbar-text" data-toggle="tooltip" title="Home"><a href="../index.html">Nedbank</a></span>
+         <!--Top Navbar links -->
+        <div class="collapse navbar-collapse mlc" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="">
+                <a class="topnavli" href="apply.html">Apply<i class="fa fa-edit"></i></a>
+              </li>
+               <li class="">
+                <a class="topnavli" href="#loginModal" role="button" data-toggle="modal">Login<i class="fa fa-user"></i></a>
+              </li> 
+          </ul>
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Login</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <a href="" class="float-right">New user?</a>
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Oops, you missed this one.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Enter your password too!</div>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                  <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                                </div>
+                                <div class="form-group py-4">
+                                    <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" data-target="#navigation" data-toggle="collapse" aria-expanded="false">
+          <span class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+            <i class="fa fa-ellipsis-v"></i>
+          </span>
+        </a>
+
+      </nav>
+      <br>
+      <div class="main">
+			<!--sidenav-->
+				<div class="container-fluid navcontent position-fixed">
+				    <div class="row d-flex d-md-block">
+				        <div class="col-md-3 float-left col-1 pl-0 pr-0 width nav-tabs" id="sidebar">
+				              <div class="list-group border-0 card text-center text-md-left">
+				                <a href="#v" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-user"></i><span class="d-none d-md-inline">PERSONAL</span></a>
+				                <a href="#vl" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-briefcase"></i> <span class="d-none d-md-inline">BUSINESS</span></a>
+				                <a href="#vla" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-newspaper-o"></i>
+				                 <span class="d-none d-md-inline">NEWS</span></a>
+				                <a href="#vlad" class="nav-link active" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-star"></i> <span class="d-none d-md-inline">TIPS</span></a>
+				                <a href="#vladi" class="nav-link" data-toggle="tab" data-parent="#sidebar"><i class="fa fa-info"></i> <span class="d-none d-md-inline">ABOUTUS</span></a>
+				            </div>
+				        </div>
+				        <div class="col px-5 pl-md-2 pt-2 main mx-auto">
+				            <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a>
+                  </div>
+			<!--tabs-->
+			<div class="tab-content content flex-column-tab" id="sidebar">
+				<div class="tab-pane container fade" id="v">
+				  	<h4 class="bgc"><a class="link" href="personalbanking.html">Personal banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="account.html">Account</a>
+				  	<hr>
+				  	<a href="seniors.html">Seniors</a>
+				  	<hr>
+				  	<a href="students.html">Students</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vl">
+				  <h4 class="bgc"><a class="link" href="businessbanking.html">Business Banking (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  <hr>
+				  <a href="fixeddeposits.html">Fixed Deposits</a>
+				  	<hr>
+				  	<a href="startuploans.html">Start-Up Loans</a>
+				  	<hr>
+				  	<a href="businesspayasyouuse.html">Business Pay-As-You-Use</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+				<div class="tab-pane container fade" id="vla">
+				  	<h4 class="bgc"><a class="link" href="news.html">News (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				 	<a href="sponsorship.html">Sponsorships</a>
+				  	<hr>
+				  	<a href="affinityproject.html">Affinity Project</a>
+				  	<hr>
+				  	<a href="pressrelease.html">Press Releases</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>				
+				<div class="tab-pane container fade" id="vladi">
+				  	<h4 class="bgc"><a class="link" href="aboutus.html">About Us (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+				  	<hr>
+				  	<a href="aboutus.html">Who Are We?</a>
+		            <hr>
+		            <a href="pvv.html">Purpose,Value, Vision and Mission</a>
+		            <hr>
+		            <a href="financialstatements.html">Financial Statements</a>
+				  	<hr>
+		            <a href="card.html">Report Stolen Cards</a>
+		            <hr>
+		            <a href="../index.html">Home</a>
+				</div>
+			  	<div class="tab-pane container active" id="vlad">
+			  		<h4 class="bgc"><a class="link" href="online.html">Banking Tips (click)  <i class="fa fa-caret-square-o-right"></i></a></h4>
+			  		<hr>
+			  		<a href="online.html">Online Banking Tips</a>
+				  	<hr>
+				  	<a href="physical.html">Physical Banking Tips</a>
+				  	<hr>
+				  	<a href="../index.html">Home</a>
+				</div>
+			</div>
+			</main>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="move">
+		<h2>Online Banking Tips</h2>
+		<img class="img3" src="../images/ob.jpg" alt="Online Banking image">
+		<hr>
+		<p>
+			1. Monitor your accounts regularly. Check your accounts regularly to make sure all transactions posted are ones you authorized. Report any fraudulent or suspicious activity to your bank. Get into the habit of monitoring your accounts every few days and always after you’ve done any type of online shopping. You will want to make sure your account was charged appropriately and that your account number isn’t being used for other purchases you didn’t make.
+		</p>
+		<br>
+		<br>
+		2. Avoid clicking through emails. Your bank or financial institution may send you email alerts and updates, but you don’t have to click through the links to access your account. It’s usually much safer to log in to the website manually to ensure you are entering a secure site. Phishing emails redirect the recipient to a malicious website or fraudulent version of the bank’s website and some are designed to collect your username, password, and other personal information. Don’t be afraid to call your bank to verify whether they sent you an email or if they need to get in touch with you. Never respond to emails that ask to verify your identity by providing your username or password. Banks will never ask for this information via email—at most, you will need to supply the answer to a security question and will do this over the phone with a personal banker.
+		<br>
+		<br>
+		3. Change your passwords regularly. Avoid using the same password across multiple sites and make sure you are choosing a strong password that is a mix of upper and lower case letters, numbers, and special characters. Avoid using any words or phrases that contain your name, initials, or your birthdate. Also get into the habit of changing them every couple of months. Some banks have an extra security step in place, where you will need to verify your identity by identifying a pre-selected image or answering a security question. This extra layer of security can make the online banking process that much safer.
+		<br>
+		<br>
+		4. Access your accounts from a secure location. Avoid using unsecured wireless access points to jump online and log in to your online accounts. You should access these accounts when you’re certain you have a secure connection. Unsecured wireless access points, such as those found at airports, coffee shops, and hotels, are easy to intercept and someone could easily collect the information you’re using to log in.
+		<br>
+		<br>
+		5. Protect your computer. Make sure you’re running anti-virus protection software and the firewall is turned on so you aren’t vulnerable to any type of virus that might be downloaded and installed from a malicious site. Take the time to review different programs and pay a little extra for a higher-quality one that will provide you with protection when you are banking online, shopping online, or just opening emails.
+		<br>
+		<br>
+		6. Check for encryption. You’ll want to check if you’re really logging in to your bank’s site by looking for a small lock icon somewhere on your browser. The URL should also begin with “https.” Both the icon and the URL indicate you are accessing your account over an encrypted connection.
+		<br>
+		<br>
+		7. Keep your system up-to-date. Whether you’re using a laptop or desktop computer to access the Internet, make sure you’re downloading appropriate updates and keeping your system up-to-date. Run anti-virus scans regularly and authorize system updates as needed. Some of the leading Trojan horse viruses only work on outdated systems, so your computer may be more vulnerable to an attack unless you continually update it. You can also run scans on a schedule to double-check for bugs.
+			</div>
+</div>
+</body>
+</html>
